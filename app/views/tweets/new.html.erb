@@ -1,11 +1,5 @@
 <p>Here's a new tweet page.</p>
 
-<% flash.each do |key, value| %>
-	<div class = "alert alert-<%= key %>">
-		<%= value %>
-	</div>
-<% end %>
-
 <%= simple_form_for @tweet, url: tweets_path, method: 'post' do |t| %>
 	<%= t.input :content %>
 	<%= t.button :submit %>
