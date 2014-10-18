@@ -1,10 +1,10 @@
 <p>Here's a new tweet page.</p>
 
-<%= simple_form_for @tweet do |t| %>
+<%= simple_form_for @tweet, url: tweets_path, method: 'post' do |t| %>
 	<%= t.input :content %>
 	<%= t.button :submit %>
 <% end %>
 
 <% @tweets.each do |tweet| %>
-	<%= tweet.content %>
+	<%= tweet.content %><br />
 <% end %>
