@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 root 'static_pages#main_page'
 
 resources "tweets"
+
+match 'processform', to: 'tweets#process_form_to_follow_user', as: :process_form_to_follow_user, via: [:post]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
