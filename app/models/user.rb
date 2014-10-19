@@ -30,4 +30,6 @@ class User < ActiveRecord::Base
   def following?(other_user)
     following.include?(other_user)
   end
+	#mounting user for carrierwave
+	mount_uploader :picture, PictureUploader
 end

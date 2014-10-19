@@ -10,6 +10,9 @@ root 'static_pages#main_page'
 resources "tweets"
 
 match 'processform', to: 'tweets#process_form_to_follow_user', as: :process_form_to_follow_user, via: [:post]
+
+get 'myprofile', to: 'static_pages#my_profile_page', as: "my_profile_page"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
